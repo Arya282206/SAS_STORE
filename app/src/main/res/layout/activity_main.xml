@@ -1,0 +1,1141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!--navigasi bar-->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="@color/design_default_color_primary"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Food Store"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck" />
+            <RelativeLayout
+                android:layout_width="30dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#F8F8F8"
+                android:backgroundTint="#FFFFFF"
+                android:drawableLeft="@drawable/ic_src"
+                android:gravity="left|center_vertical"
+                android:text="Cari Sesuatu"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                tools:ignore="TextContrastCheck" />
+            <RelativeLayout
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="45dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="5dp"
+                tools:ignore="TouchTargetSizeCheck">
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_favorite"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </androidx.cardview.widget.CardView>
+            <RelativeLayout
+                android:layout_width="15dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+    <!--header-->
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/header"/>
+            <!--splash-->
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="-100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/splash">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:src="@drawable/g3"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp">
+                    </ImageView>
+                </LinearLayout>
+                <LinearLayout
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textStyle="bold"
+                        android:text="Khusus Hari Ini"
+                        android:textColor="#000000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:text="2 Varian Rasa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:text="RP. 5.000"
+                        android:textColor="#000000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#5E5C5C"
+                        android:text="Ambil Promo"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--Menu-->
+            <LinearLayout
+                android:padding="15dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--card menu-->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@drawable/card_button"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        android:padding="20dp"
+                        tools:ignore="SpeakableTextPresentCheck">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:cropToPadding="true"
+                            android:src="@drawable/category" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Kategori"
+                        android:textColor="#000000"
+                        android:textAlignment="center"
+                        android:textSize="15dp"
+                        tools:ignore="TextSizeCheck" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"/>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@drawable/card_button"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        android:padding="20dp"
+                        tools:ignore="SpeakableTextPresentCheck">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:cropToPadding="true"
+                            android:src="@drawable/discount" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Discount"
+                        android:textColor="#000000"
+                        android:textAlignment="center"
+                        android:textSize="15dp"
+                        tools:ignore="TextSizeCheck" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"/>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@drawable/card_button"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        android:padding="20dp"
+                        tools:ignore="SpeakableTextPresentCheck">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:cropToPadding="true"
+                            android:src="@drawable/sale" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Promo"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        tools:ignore="TextSizeCheck" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"/>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@drawable/card_button"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        android:padding="20dp"
+                        tools:ignore="SpeakableTextPresentCheck">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:cropToPadding="true"
+                            android:src="@drawable/price" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Bandingkan"
+                        android:textColor="#000000"
+                        android:textAlignment="center"
+                        android:textSize="15dp"
+                        tools:ignore="TextSizeCheck" />
+                </LinearLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+            <LinearLayout
+                android:padding="15dp"
+                android:background="@drawable/bacground_khusus"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--Title Swip-->
+                <LinearLayout
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="#FEFBF6"
+                        android:layout_weight="1"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:text="Produk Terbaru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <Button
+                        android:textAllCaps="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#5E5C5C"
+                        android:text="View All"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+                <HorizontalScrollView
+                    android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!--card produk-->
+                        <LinearLayout
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:padding="4dp"
+                            android:background="@drawable/card_produk"
+                            android:orientation="vertical"
+                            android:layout_width="160dp"
+                            android:layout_height="200dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <androidx.cardview.widget.CardView
+                                    app:cardCornerRadius="30dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:cropToPadding="false"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/g1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="104dp"/>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Original"
+                                    android:textSize="12dp"
+                                    android:textColor="#000000"
+                                    tools:ignore="TextSizeCheck" />
+                                <TextView
+                                    android:textStyle="bold"
+                                    android:text="RP 4.000"
+                                    android:textColor="#000000"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent"/>
+                        <!--card produk-->
+                        <LinearLayout
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:padding="4dp"
+                            android:background="@drawable/card_produk"
+                            android:orientation="vertical"
+                            android:layout_width="160dp"
+                            android:layout_height="200dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <androidx.cardview.widget.CardView
+                                    app:cardCornerRadius="30dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:cropToPadding="false"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/g2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"/>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Coklat+Keju"
+                                    android:textSize="12dp"
+                                    android:textColor="#000000"
+                                    tools:ignore="TextSizeCheck" />
+                                <TextView
+                                    android:textStyle="bold"
+                                    android:textColor="#000000"
+                                    android:text="RP 8.000"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent"/>
+                        <!--card produk-->
+                        <LinearLayout
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:padding="4dp"
+                            android:background="@drawable/card_produk"
+                            android:orientation="vertical"
+                            android:layout_width="160dp"
+                            android:layout_height="200dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <androidx.cardview.widget.CardView
+                                    app:cardCornerRadius="30dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:cropToPadding="false"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/g4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="105dp"/>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Coklat"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp"
+                                    tools:ignore="TextSizeCheck" />
+                                <TextView
+                                    android:textStyle="bold"
+                                    android:text="RP 6.000"
+                                    android:textColor="#000000"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent"/>
+                        <!--card produk-->
+                        <LinearLayout
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:padding="4dp"
+                            android:background="@drawable/card_produk"
+                            android:orientation="vertical"
+                            android:layout_width="160dp"
+                            android:layout_height="200dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <androidx.cardview.widget.CardView
+                                    app:cardCornerRadius="30dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:cropToPadding="false"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/g5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="104dp"/>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:textSize="12dp"
+                                    android:textColor="#000000"
+                                    android:text="Mix"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:textStyle="bold"
+                                    android:textColor="#000000"
+                                    android:text="RP 10.000"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent"/>
+                        <!--card produk-->
+                        <LinearLayout
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:padding="4dp"
+                            android:background="@drawable/card_produk"
+                            android:orientation="vertical"
+                            android:layout_width="160dp"
+                            android:layout_height="200dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <androidx.cardview.widget.CardView
+                                    app:cardCornerRadius="30dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:cropToPadding="false"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/g3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="104dp"/>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="2 Rasa"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp"
+                                    tools:ignore="TextSizeCheck" />
+                                <TextView
+                                    android:textStyle="bold"
+                                    android:text="RP 5.000"
+                                    android:textColor="#000000"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <!--Produk Lainnya-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--card produk-->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:padding="4dp"
+                        android:background="@drawable/card_produk"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.cardview.widget.CardView
+                                app:cardCornerRadius="30dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:cropToPadding="false"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/g6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="104dp"/>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Original"
+                                android:textColor="#000000"
+                                android:textSize="12dp"
+                                tools:ignore="TextSizeCheck" />
+                            <TextView
+                                android:textStyle="bold"
+                                android:textColor="#000000"
+                                android:text="RP 5.000"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:padding="4dp"
+                        android:background="@drawable/card_produk"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.cardview.widget.CardView
+                                app:cardCornerRadius="30dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:cropToPadding="false"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/g8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="104dp"/>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Coklat"
+                                android:textColor="#000000"
+                                android:textSize="12dp"
+                                tools:ignore="TextSizeCheck" />
+                            <TextView
+                                android:textStyle="bold"
+                                android:text="RP 5.000"
+                                android:textColor="#000000"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Produk Lainnya-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--card produk-->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:padding="4dp"
+                        android:background="@drawable/card_produk"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.cardview.widget.CardView
+                                app:cardCornerRadius="30dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:cropToPadding="false"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/g9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="104dp"/>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Pisang Caramel"
+                                android:textSize="12dp"
+                                android:textColor="#000000"
+                                tools:ignore="TextSizeCheck" />
+                            <TextView
+                                android:textStyle="bold"
+                                android:text="RP 5.000"
+                                android:textColor="#000000"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:padding="4dp"
+                        android:background="@drawable/card_produk"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.cardview.widget.CardView
+                                app:cardCornerRadius="30dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:cropToPadding="false"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/g10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="104dp"/>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Coklat"
+                                android:textColor="#000000"
+                                android:textSize="12dp"
+                                tools:ignore="TextSizeCheck" />
+                            <TextView
+                                android:textStyle="bold"
+                                android:textColor="#000000"
+                                android:text="RP 5.000"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Produk Lainnya-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--card produk-->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:padding="4dp"
+                        android:background="@drawable/card_produk"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.cardview.widget.CardView
+                                app:cardCornerRadius="30dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:cropToPadding="false"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/g11"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="104dp"/>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Sneakers"
+                                android:textSize="12dp"
+                                android:textColor="#000000"
+                                tools:ignore="TextSizeCheck" />
+                            <TextView
+                                android:textStyle="bold"
+                                android:textColor="#000000"
+                                android:text="RP 50.000"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:padding="4dp"
+                        android:background="@drawable/card_produk"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.cardview.widget.CardView
+                                app:cardCornerRadius="30dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:cropToPadding="false"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/g12"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="104dp"/>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Sneakers"
+                                android:textColor="#000000"
+                                android:textSize="12dp"
+                                tools:ignore="TextSizeCheck" />
+                            <TextView
+                                android:textStyle="bold"
+                                android:textColor="#000000"
+                                android:text="RP 74.500"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Produk Lainnya-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--card produk-->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:padding="4dp"
+                        android:background="@drawable/card_produk"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.cardview.widget.CardView
+                                app:cardCornerRadius="30dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:cropToPadding="false"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/g13"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="104dp"/>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Converse All Star"
+                                android:textSize="12dp"
+                                android:textColor="#000000"
+                                tools:ignore="TextSizeCheck" />
+                            <TextView
+                                android:textStyle="bold"
+                                android:textColor="#000000"
+                                android:text="RP 119.999"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:padding="4dp"
+                        android:background="@drawable/card_produk"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.cardview.widget.CardView
+                                app:cardCornerRadius="30dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:cropToPadding="false"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/g14"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="104dp"/>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Hundred Xoom Pro-Red/White"
+                                android:textSize="12dp"
+                                android:textColor="#000000"
+                                tools:ignore="TextSizeCheck" />
+                            <TextView
+                                android:textStyle="bold"
+                                android:text="RP 85.000"
+                                android:textColor="#000000"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Produk Lainnya-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--card produk-->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:padding="4dp"
+                        android:background="@drawable/card_produk"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.cardview.widget.CardView
+                                app:cardCornerRadius="30dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:cropToPadding="false"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/g15"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="104dp"/>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Sneakers"
+                                android:textColor="#000000"
+                                android:textSize="12dp"
+                                tools:ignore="TextSizeCheck" />
+                            <TextView
+                                android:textStyle="bold"
+                                android:text="RP 55.000"
+                                android:textColor="#000000"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:padding="4dp"
+                        android:background="@drawable/card_produk"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.cardview.widget.CardView
+                                app:cardCornerRadius="30dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:cropToPadding="false"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/g16"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="104dp"/>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="JOGFLOW"
+                                android:textSize="12dp"
+                                android:textColor="#000000"
+                                tools:ignore="TextSizeCheck" />
+                            <TextView
+                                android:textStyle="bold"
+                                android:textColor="#000000"
+                                android:text="RP 65.200"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        app:labelVisibilityMode="labeled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_primary"
+        app:menu="@menu/item_buttom_navigation" />
+</LinearLayout>
